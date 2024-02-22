@@ -1,5 +1,6 @@
 package tp.exercice.tporg.ws.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -21,6 +22,7 @@ public class PaiementDto {
     private TypePaiement typePaiement;
     private boolean encaissement;
     @ManyToOne
+    @JsonIgnore
     private Commande commande;
 
     public Long getId() {

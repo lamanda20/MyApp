@@ -47,7 +47,7 @@ public class PaiementWs {
         return service.save(bean);
     }
 
-    @DeleteMapping("code/{code}")
+    @DeleteMapping("code/delete/{code}")
     public int deleteByCode(@PathVariable String code) {
         return service.deleteByCode(code);
     }

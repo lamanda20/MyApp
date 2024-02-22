@@ -36,7 +36,7 @@ public class PaiementServiceImpl implements PaiementService {
         } else {
             dao.save(paiement);
             if (ESPECE.equals(typePaiement.getCode())) {
-                commande.setMontantPayeEspece(commande.getMontantPayeEspece() + paiement.getMontant());
+                commande.setMontantPayeEspece(commande.getMontantPayeEspece() - paiement.getMontant());
             } else if (CHEQUE.equals(typePaiement.getCode())) {
                 commande.setMontantPayeCheque(commande.getMontantPayeCheque() + paiement.getMontant());
             }
